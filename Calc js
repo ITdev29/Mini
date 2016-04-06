@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Calc js</title>
+</head>
+<body align="center">
+<style>
+    h1 {
+        font-size: 60px;
+        color: #fff714;
+    }
+    body {
+        background: url(https://pp.vk.me/c631417/v631417497/2062e/r-J4_9H23qI.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .first {
+        width: 60px;
+        height:60px;
+        font-size: 30px;
+        border-radius: 8px;
+        margin:3px
+    }
+    .all {
+        width: 60px;
+        height:60px;
+        font-size: 30px;
+        border-radius: 8px ;
+    }
+    .last {
+        width: 254px;
+        height:60px;
+        font-size: 30px;
+        border-radius: 8px;
+    }
+</style>
+<h1>JavaScript Calculator</h1>
+<form name="Calculator">
+<input name="display" placeholder="0" style="width: 254px; height:60px; text-align: right; font-size: 30px; border-radius: 8px; margin: 3px"/>
+<br>
+<input type="button" value="7" onClick ="document.Calculator.display.value +='7'" class="first" >
+<input type="button" value="8" onClick ="document.Calculator.display.value +='8'" class="all">
+<input type="button" value="9" onClick ="document.Calculator.display.value +='9'" class="all">
+<input type="button" value="+" onClick ="btnplus()" class="all">
+<br>
+<input type="button" value="4" onClick ="document.Calculator.display.value +='4'" class="first">
+<input type="button" value="5" onClick ="document.Calculator.display.value +='5'" class="all">
+<input type="button" value="6" onClick ="document.Calculator.display.value +='6'" class="all">
+<input type="button" value="-" onClick ="btnsub()" class="all">
+<br>
+<input type="button" value="1" onClick ="document.Calculator.display.value +='1'" class="first">
+<input type="button" value="2" onClick ="document.Calculator.display.value +='2'" class="all">
+<input type="button" value="3" onClick ="document.Calculator.display.value +='3'" class="all">
+<input type="button" value="*" onClick ="btnmult()" class="all">
+<br>
+<input type="button" value="0" onClick ="document.Calculator.display.value +='0'" class="first">
+<input type="button" value="." onClick ="btndot()" class="all">
+<input type="button" value="/" onClick ="btndiv()" class="all">
+<input type="button" value="C" onClick ="btnclear()" class="all">
+<br>
+<input type="button" value="=" onClick ="document.Calculator.display.value = eval(document.Calculator.display.value)" class="last"/>
+
+    </form>
+<script>
+    function btnplus() {
+        document.Calculator.display.value +="+";
+        document.Calculator.display.textAlign="right";
+    }
+    function btnsub() {
+        document.Calculator.display.value +="-";
+        document.Calculator.display.textAlign="right";
+    }
+    function btnmult() {
+        document.Calculator.display.value +="*";
+        document.Calculator.display.textAlign="right";
+    }
+    function btndot() {
+        document.Calculator.display.value +=".";
+        document.Calculator.display.textAlign="right";
+    }
+    function btndiv() {
+        document.Calculator.display.value +="/";
+        document.Calculator.display.textAlign="right";
+    }
+    function btnclear() {
+        document.Calculator.display.value ="";
+        document.Calculator.display.textAlign="right";
+    }
+</script>
+</body>
+</html>
